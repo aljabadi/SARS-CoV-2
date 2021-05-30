@@ -128,7 +128,9 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
-          path: ./multiomics/results
+          path: |
+            ./multiomics/results
+            !./multiomics/results/data
 
 
       # - name: Notify Slack 📣
